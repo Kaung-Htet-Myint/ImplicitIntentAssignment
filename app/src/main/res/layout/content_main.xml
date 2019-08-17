@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Chronometer
+                android:id="@+id/cm_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#000"
+                android:padding="10dp"
+                android:textColor="#f00"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cm_timer"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btn_start"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/start"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_stop"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/stop"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_restart"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/restart"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_select_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_create_date_event"
+                android:layout_below="@+id/ll_timer"
+                android:layout_marginStart="@dimen/margin_card_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                />
+
+            <TextView
+                android:id="@+id/tv_selected_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/format_selected_date"
+                android:layout_toEndOf="@+id/btn_select_date"
+                android:layout_below="@id/ll_timer"
+                android:layout_alignTop="@+id/btn_select_date"
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                />
+
+            <Button
+                android:id="@+id/btn_select_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_select_video"
+                android:layout_below="@+id/btn_select_date"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <VideoView
+                android:id="@+id/vv_video_captured"
+                android:layout_width="300dp"
+                android:layout_height="260dp"
+                android:layout_below="@+id/btn_select_video"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_centerHorizontal="true"/>
+
+
+            <Button
+                android:id="@+id/btn_select_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vv_video_captured"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_alignStart="@+id/btn_select_date"
+                android:text="@string/btn_select_contact" />
+
+            <LinearLayout
+                android:id="@+id/ll_contact_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/btn_select_contact"
+                android:layout_toEndOf="@+id/btn_select_contact"
+                android:layout_marginStart="@dimen/margin_medium">
+
+                <TextView
+                    android:id="@+id/tv_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selected_contact_name" />
+
+                <TextView
+                    android:id="@+id/tv_contact_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selected_contact_number"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_web_search"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_web_search"
+                android:layout_below="@+id/btn_select_contact"
+                android:layout_alignStart="@+id/btn_select_contact"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <Button
+                android:id="@+id/btn_web_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_search"
+                android:layout_below="@+id/et_web_search"
+                android:layout_alignStart="@+id/et_web_search"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

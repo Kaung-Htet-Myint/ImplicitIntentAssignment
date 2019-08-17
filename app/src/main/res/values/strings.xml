@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ImplicitIntentAssignment</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="chronometerInAndroid">Chronometer In Android</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="restart">Restart</string>
+    <string name="setFormat">Set Format</string>
+    <string name="clearFormat">Clear Format</string>
+
+
+    <string name="btn_create_date_event">Create Date Event</string>
+
+    <string name="format_selected_date">Your selected date :</string>
+    <string name="format_selected_time">Your Selected time : </string>
+    <string name="btn_select_video">Select Videos</string>
+    <string name="selected_contact_name">Name</string>
+    <string name="selected_contact_number">Number</string>
+    <string name="btn_select_contact">Select a Contact</string>
+    <string name="hint_web_search">www.google.com</string>
+    <string name="btn_search">Search</string>
+</resources>
